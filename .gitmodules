@@ -1,4 +1,4 @@
-[submodule "VGEngine"]
+[submodule "code/VGEngine"]
 	path = code/VGEngine
 	url = https://github.com/tsividis/VGEngine.git
 [submodule "code/VGTranspiler"]
