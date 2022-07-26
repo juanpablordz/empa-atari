@@ -1,0 +1,9 @@
+metadata_version: 1
+name: EMPA atari
+description: Exploring, Modeling and Planning Agent for the Atari Environment.
+authors:
+- name: Pedro Tsividis
+  affiliations:
+  - name: MIT
+- name: Juan Pablo Rodriguez
+- name: Sergio Arnaud
