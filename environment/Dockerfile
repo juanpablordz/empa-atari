@@ -26,53 +26,33 @@ RUN apt-get update \
         zlib1g-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# RUN pip install -U --no-cache-dir --upgrade-strategy=only-if-needed \
-#     absl-py \
-#     atari-py \
-#     backports-functools-lru-cache==1.5 \
-#     backports-shutil-get-terminal-size==1.0.0 \
-#     cloudpickle==1.2.2 \
-#     cycler==0.10.0 \
-#     decorator==4.4.0 \
-#     enum34==1.1.6 \
-#     ffmpeg==1.4 \
-#     future==0.17.1 \
-#     futures==3.3.0 \
-#     gin-config \
-#     gym \
-#     imageio==2.5.0 \
-#     ipython==5.8.0 \
-#     ipython-genutils==0.2.0 \
-#     kiwisolver==1.1.0 \
-#     matplotlib==2.2.4 \
-#     networkx==2.2 \
-#     numpy==1.16.4 \
-#     opencv-python \
-#     pathlib2==2.3.4 \
-#     pexpect==4.7.0 \
-#     pickleshare==0.7.5 \
-#     pillow==6.1.0 \
-#     prompt-toolkit==1.0.16 \
-#     ptyprocess==0.6.0 \
-#     pybrain==0.3 \
-#     pygame==1.9.6 \
-#     pygments==2.4.2 \
-#     pyparsing==2.4.0 \
-#     python-dateutil==2.8.0 \
-#     pytz==2019.1 \
-#     pywavelets==1.0.3 \
-#     scandir==1.10.0 \
-#     scikit-image==0.14.3 \
-#     scipy==1.2.2 \
-#     simplegeneric==0.8.1 \
-#     six==1.12.0 \
-#     subprocess32==3.5.4 \
-#     tensorflow-gpu \
-#     termcolor==1.1.0 \
-#     torch==1.1.0 \
-#     torchvision==0.3.0 \
-#     traitlets==4.3.2 \
-#     wcwidth==0.1.7
+RUN pip install -U --no-cache-dir --upgrade-strategy=only-if-needed \
+    absl-py==0.9.0
+    decorator==4.4.1
+    enum34==1.1.6
+    ipython==5.8.0
+    ipython-genutils==0.2.0
+    lark-parser==0.7.8
+    numpy==1.16.5
+    pygame==1.9.6
+    pymunk==5.6.0
+    scipy==1.2.1
+    tqdm==4.41.1
+    opencv-python==4.2.0.32
+    ipdb==0.13.2
+    gevent==1.4.0
+    typing==3.7.4.1
+    imageio==2.6.1
+    webcolors==1.10
+    matplotlib==2.2.5
+    sklearn==0.0
+    guppy==0.1.11
+    atari-py==0.2.6
+    gym==0.16.0
+    GitPython==2.1.15
+    grpcio==1.37.1
+    grpcio-tools==1.37.1
+    psutil==5.8.0
 
 # RUN echo 'options(repos = c(CRAN = "https://cran.microsoft.com/snapshot/2018-04-01/"), download.file.method = "libcurl")' >> /etc/R/Rprofile.site \
 #     && echo 'options(Ncpus = parallel::detectCores())' >> /etc/R/Rprofile.site \
@@ -90,4 +70,3 @@ RUN apt-get update \
 #     && Rscript -e 'options(warn=2); devtools::install_version("purrr", version = "0.2.4")' \
 #     && Rscript -e 'options(warn=2); devtools::install_version("zoo", version = "1.8-1")' \
 #     && Rscript -e 'options(warn=2); devtools::install_version("zoom", version = "2.0.4")'
-
